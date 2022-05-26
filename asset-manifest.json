@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/ruchipatel/NewsMonkey-App.git/static/js/main.64ddfe6e.js",
+    "main.js": "/ruchipatel/NewsMonkey-App.git/static/js/main.8b434cee.js",
     "static/js/787.7a15faef.chunk.js": "/ruchipatel/NewsMonkey-App.git/static/js/787.7a15faef.chunk.js",
     "index.html": "/ruchipatel/NewsMonkey-App.git/index.html",
-    "main.64ddfe6e.js.map": "/ruchipatel/NewsMonkey-App.git/static/js/main.64ddfe6e.js.map",
+    "main.8b434cee.js.map": "/ruchipatel/NewsMonkey-App.git/static/js/main.8b434cee.js.map",
     "787.7a15faef.chunk.js.map": "/ruchipatel/NewsMonkey-App.git/static/js/787.7a15faef.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.64ddfe6e.js"
+    "static/js/main.8b434cee.js"
   ]
 }
