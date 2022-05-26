@@ -14,3 +14,7 @@
 .section.py-5 {
   position: relative;
 }
+.nav-link
+{
+  text-transform: capitalize;
+}
