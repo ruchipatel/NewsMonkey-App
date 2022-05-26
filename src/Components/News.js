@@ -16,7 +16,7 @@ export default class News extends Component {
 
   async componentDidMount()
   {
-    let data_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=9d220fcff82f453caa833fc8381a7b92&page=1&pagesize=${this.props.pageSize}`;
+    let data_url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9d220fcff82f453caa833fc8381a7b92&page=1&pagesize=${this.props.pageSize}`;
     this.setState({loading:true});
     let data = await fetch(data_url);
     let parsedData = await data.json();
@@ -25,7 +25,7 @@ export default class News extends Component {
   }
 
   handlePrevClick = async () => {
-    let data_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=9d220fcff82f453caa833fc8381a7b92&page=${this.state.page - 1}&pagesize=${this.props.pageSize}`;
+    let data_url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9d220fcff82f453caa833fc8381a7b92&page=${this.state.page - 1}&pagesize=${this.props.pageSize}`;
     this.setState({loading:true});
     let data = await fetch(data_url);
     let parsedData = await data.json();
@@ -39,7 +39,7 @@ export default class News extends Component {
   }
   handleNextClick = async () => {
     if(this.state.page + 1 <= Math.ceil(this.state.totalResults/this.props.pageSize) ){
-      let data_url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=9d220fcff82f453caa833fc8381a7b92&page=${this.state.page + 1}&pagesize=${this.props.pageSize}`;
+      let data_url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9d220fcff82f453caa833fc8381a7b92&page=${this.state.page + 1}&pagesize=${this.props.pageSize}`;
       this.setState({loading:true});
       let data = await fetch(data_url);
       let parsedData = await data.json();
@@ -58,7 +58,7 @@ export default class News extends Component {
       <div>
          <div className='section py-5'>
              <div className='container'>
-                 <h1>NewsMonkies Top Headlines</h1>
+                 <h1 className='text-center'>NewsMonkies Top Headlines</h1>
 
                  {this.state.loading && <Spinner/>}
 
